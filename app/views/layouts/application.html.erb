@@ -16,7 +16,9 @@
       <% flash.each do |name, msg| %>
         <p><%= msg %></p>
       <% end %>
-    <%= yield %>
+      <main role="main" class="inner cover">
+        <%= yield %>
+      </main>
       <footer class="mastfoot mt-auto">
         <div class="inner">
           <p>Vaiva</p>

@@ -1,25 +1,23 @@
-<main role="main" class="inner cover">
-  <h1 class="cover-heading">Create an article</h1>
-  <% if @article.errors.any? %>
-  <h3>The following errors prevented the article from being saved:</h3>
-  <p>
-    <% @article.errors.full_messages.each do |msg| %>
-      <p><%= msg %></p>
-    <% end %>
-  </p>
+<h1 class="cover-heading">Create an article</h1>
+<% if @article.errors.any? %>
+<h3>The following errors prevented the article from being saved:</h3>
+<p>
+  <% @article.errors.full_messages.each do |msg| %>
+    <p><%= msg %></p>
   <% end %>
+</p>
+<% end %>
 
-  <%= form_for @article do |f| %>
-    <p>
-      <%= f.label :title %><br/>
-      <%= f.text_field :title %>
-    </p>
-    <p>
-      <%= f.label :description %><br/>
-      <%= f.text_area :description %>
-    </p>
-    <p>
-      <%= f.submit %>
-    </p>
-  <% end %>
-</main>
+<%= form_for @article do |f| %>
+  <p>
+    <%= f.label :title %><br/>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :description %><br/>
+    <%= f.text_area :description %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
