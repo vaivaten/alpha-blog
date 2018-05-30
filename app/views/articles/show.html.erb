@@ -1,5 +1,9 @@
-<h1 class="cover-heading">Showing selected article</h1>
-<p>Title: <%= @article.title %></p>
-<p>Description: <%= @article.description %></p>
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+<h1 class="cover-heading"><%= @article.title %></h1>
+<p><%= @article.description %></p>
+
+<hr>
+<%= link_to 'Edit', edit_article_path(@article), class: 'btn btn-primary' %>
+<%= link_to 'View all articles', articles_path, class: 'btn btn-primary' %>
+<%= link_to 'Delete', article_path(@article), class: 'btn btn-danger',
+                      method: :delete,
+                      data: { confirm: 'Are you sure you want to delete?' } %>
