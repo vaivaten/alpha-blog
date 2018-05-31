@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Articles</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag 'articles', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+
+    <%= render 'articles/nav' %>
+
+    <main role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <div class="container">
+          <h1 class="display-3">Hello, world!</h1>
+          <p>This is my blog</p>
+          <%= link_to "Learn more", about_path, class: 'btn btn-primary btn-lg' %>
+        </div>
+      </div>
+      <div class='container'>
+        <%= render 'layouts/messages' %>
+        <div class="row">
+          <%= yield %>
+        </div>
+      </div>
+    </main>
+    <hr>
+    <%= render 'shared/footer' %>
+  </body>
+</html>
