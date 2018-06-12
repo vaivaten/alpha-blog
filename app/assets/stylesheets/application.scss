@@ -73,9 +73,10 @@ body {
   border-bottom-color: rgba(255, 255, 255, .25);
 }
 
-.nav-masthead .nav-link + .nav-link {
+.nav-masthead .nav-link + .nav-link, .nav-item.dropdown {
   margin-left: 1rem;
 }
+
 
 .nav-masthead .active {
   color: #fff;
