@@ -10,7 +10,7 @@
 
       <hr>
       <%= link_to 'View all articles', articles_path, class: 'btn btn-primary' %>
-      <% if logged_in? && current_user == @article.user %>
+      <% if logged_in? && (current_user == @article.user || current_user.admin?) %>
         <%= link_to 'Edit', edit_article_path(@article), class: 'btn btn-primary' %>
         <%= link_to 'Delete', article_path(@article), class: 'btn btn-danger',
                               method: :delete,
