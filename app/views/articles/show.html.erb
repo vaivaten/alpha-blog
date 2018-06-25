@@ -4,6 +4,10 @@
       <h1><%= @article.title %></h1>
       <p><%= @article.description %></p>
 
+      <% if @article.categories %>
+        <%= render @article.categories %>
+      <% end %>
+
       <% if @article.user %>
         <p>By: <%= link_to @article.user.username, user_path(@article.user) %></p>
       <% end %>
